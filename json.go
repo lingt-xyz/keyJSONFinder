@@ -40,6 +40,7 @@ type (
 	}
 )
 
+// findJSON is the main method to find `top` JSON files in the `folder` that contain keywords
 func findJSON(folder string, keywords []string, top int) {
 	outputDir, err := prepareDir()
 	if err != nil {
@@ -66,6 +67,7 @@ func findJSON(folder string, keywords []string, top int) {
 	}
 }
 
+// prepareDir creates an `output` folder in the working directory
 func prepareDir() (string, error) {
 	path, _ := os.Getwd()
 	outputDir := filepath.Join(path, "output")
@@ -77,6 +79,7 @@ func prepareDir() (string, error) {
 	return outputDir, nil
 }
 
+// containsKeywords checks whether the given file contains any keyword in `keywords`
 func containsKeywords(filePath string, keywords []string) (bool, error) {
 	file, err := ioutil.ReadFile(filePath)
 	if err != nil {

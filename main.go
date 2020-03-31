@@ -11,6 +11,7 @@ func main() {
 	findJSON(folder, keywords, top)
 }
 
+// getParameters gets all user input
 func getParameters() (string, []string, int) {
 	input := flag.String("input", "", "Folder having JSON files")
 	keywords := flag.String("keywords", "", "Keywords to be found in JSON files")
