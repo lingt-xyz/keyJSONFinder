@@ -1,8 +1,11 @@
 # keyJSONFinder
 find JSON files that contains specific keywords
 
+## Input
+Folder that contains JSON files to be matched. It can have any depth as the program will walk all of them.
+
 ## Output
-Matched JSON files will be put in `output` folder
+Matched JSON files. They will be put in `output` folder.
 
 ## How to run it
 
