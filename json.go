@@ -12,7 +12,6 @@ import (
 )
 
 type (
-	// types that are mapping vex json json
 	GraphJson struct {
 		Directed       int    `json:"directed"`
 		ProjectName    string `json:"projectname"`
@@ -96,7 +95,6 @@ func containsKeywords(filePath string, keywords []string) (bool, error) {
 			}
 		}
 	}
-
 	return false, nil
 }
 
